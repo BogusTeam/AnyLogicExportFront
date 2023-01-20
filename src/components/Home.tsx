@@ -123,7 +123,7 @@ function Home() {
             <form className="d-flex mt-5" onSubmit={onSubmitForm}>
                 <label htmlFor={"scenario"}>Сценарий</label>
                 <input
-                    type="text"
+                    type="number"
                     className={`form-control ${classes.inp}`}
                     name="scenario"
                     value={scenario}
@@ -132,7 +132,7 @@ function Home() {
                 <br/>
                 <label htmlFor={"terminals"}>Кол-во терминалов</label>
                 <input
-                    type="text"
+                    type="number"
                     className={`form-control ${classes.inp}`}
                     name="terminals"
                     value={terminals}
@@ -141,7 +141,7 @@ function Home() {
                 <br/>
                 <label htmlFor={"visitors"}>Темп посещения посетителей</label>
                 <input
-                    type="text"
+                    type="number"
                     className={`form-control ${classes.inp}`}
                     name="visitors"
                     value={visitors}
