@@ -1,4 +1,5 @@
 import React, {Fragment, useEffect, useState} from "react";
+import Plot from 'react-plotly.js';
 import classes from "./all.module.css";
 
 const baseURL = "http://localhost:22080/api"
@@ -190,6 +191,26 @@ function Home() {
                 )}
                 </tbody>
             </table>
+            <h3>График</h3>
+            <Plot
+                data={[
+                    {
+                        x: items.map(item => item.sim_year !== null ? item.sim_year / (60 * 24) : null),
+                        y: items.map(item => item.cust_served),
+                        fill: 'tozeroy',
+                        type: 'scatter',
+                        name: 'Обслуженные покупатели'
+                    },
+                    {
+                        x: items.map(item => item.sim_year !== null ? item.sim_year / (60 * 24) : null),
+                        y: items.map(item => item.cust_refused),
+                        fill: 'tozeroy',
+                        type: 'scatter',
+                        name: 'Необслуженные покупатели'
+                    },
+                ]}
+                layout={ {width: 820, height: 480, title: 'Гравик обслуживания'} }
+            />
         </Fragment>
     );
 }
