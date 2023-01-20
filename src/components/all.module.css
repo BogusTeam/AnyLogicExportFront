@@ -1,0 +1,38 @@
+.par {
+    text-align: center;
+    font-family: "Comic Sans MS", fantasy;
+    font-size: medium;
+    color: aliceblue !important;
+}
+
+.imp {
+    font-size: x-small !important;
+    font-family: "Segoe Script", sans-serif;
+}
+
+.img {
+    width: 40px;
+    height: auto;
+}
+
+.links {
+    color: aquamarine !important;
+    padding: 10px;
+    align-self: stretch;
+}
+
+.container {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+
+.inp {
+    margin-left: 10px;
+    max-width: 50px;
+    text-align: center;
+}
+
+.btn {
+    margin-left: 10px;
+}
